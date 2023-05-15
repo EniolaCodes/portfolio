@@ -1,5 +1,68 @@
-/* font-family: " Roboto, sans-serif"; */
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
+:root {
+  --btn-color: #272142;
+  --btn-padding: 10px 34px;
+  --btn-radius: 40px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: #ffffff;
+}
+
+body {
+  font-family: "Roboto", Sans-serif;
+}
 h1 {
-  background: red;
-  font-family: "Roboto", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.hero {
+  text-align: center;
+  padding: 170px 30px;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hero p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: auto;
+}
+.btn-link {
+  background: #ffffff;
+  color: var(--btn-color);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  text-decoration: none;
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding);
+  -webkit-border-radius: var(--btn-radius);
+  -moz-border-radius: var(--btn-radius);
+  -ms-border-radius: var(--btn-radius);
+  -o-border-radius: var(--btn-radius);
+}
+@media (min-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+      url(/src/images/bg.png) center/cover no-repeat;
+  }
+  .hero p {
+    max-width: 600px;
+    margin: auto;
+  }
 }
