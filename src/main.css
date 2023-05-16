@@ -18,6 +18,7 @@ p {
 
 body {
   font-family: "Roboto", Sans-serif;
+  background: #000000;
 }
 h1 {
   font-size: 72px;
@@ -34,13 +35,14 @@ h2 {
 .hero {
   text-align: center;
   padding: 170px 30px;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+    url(/src/images/bg.png) center/cover no-repeat;
 }
 .hero p {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 .btn-link {
@@ -56,13 +58,24 @@ h2 {
   -ms-border-radius: var(--btn-radius);
   -o-border-radius: var(--btn-radius);
 }
-@media (min-width: 768px) {
+
+@media (max-width: 768px) {
   .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
-      url(/src/images/bg.png) center/cover no-repeat;
+    background-image: none;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  h2 {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .hero {
+    padding: 50px 10px;
   }
   .hero p {
-    max-width: 600px;
+    font-size: 14px;
+    max-width: 370px;
     margin: auto;
   }
 }
