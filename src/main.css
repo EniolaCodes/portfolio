@@ -21,7 +21,15 @@ p {
 }
 a {
   text-decoration: none;
+  transition: all 200ms in ease-in-out;
   color: #ffffff;
+  -webkit-transition: all 200ms in ease-in-out;
+  -moz-transition: all 200ms in ease-in-out;
+  -ms-transition: all 200ms in ease-in-out;
+  -o-transition: all 200ms in ease-in-out;
+}
+a:hover {
+  color: #f65282;
 }
 body {
   font-family: "Roboto", Sans-serif;
@@ -39,7 +47,28 @@ h2 {
   text-transform: uppercase;
   line-height: 1;
 }
-
+.logo {
+  max-width: 150px;
+}
+nav li {
+  background: none;
+  line-height: 42px;
+  color: #ffffff;
+  font-size: 16px;
+}
+nav {
+  padding: 30px 0;
+}
+nav a {
+  transition: all in 200ms ease-in-out;
+  -webkit-transition: all in 200ms ease-in-out;
+  -moz-transition: all in 200ms ease-in-out;
+  -ms-transition: all in 200ms ease-in-out;
+  -o-transition: all in 200ms ease-in-out;
+}
+nav li.active a {
+  color: #808080;
+}
 .hero {
   text-align: center;
   /* padding: 170px 30px; */
@@ -115,7 +144,7 @@ li:first-child {
 .content-container {
   padding: 170px 30px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero-image {
     background-image: none;
     background: #808080;
@@ -152,6 +181,10 @@ li:first-child {
   .photo {
     margin-bottom: 20px;
     max-width: 100%;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 @media (max-width: 1200px) {
