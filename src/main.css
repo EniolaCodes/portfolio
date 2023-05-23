@@ -30,7 +30,7 @@ a {
   -o-transition: var(--transition);
 }
 a:hover {
-  color: #f65282;
+  color: --var(--heading-color);
 }
 body {
   font-family: "Roboto", Sans-serif;
@@ -63,6 +63,10 @@ nav {
 
 nav li.active a {
   color: #808080;
+}
+nav li,
+a:hover {
+  color: var(--heading-color);
 }
 .hero {
   text-align: center;
@@ -168,6 +172,9 @@ footer p {
 .socials a:hover {
   color: var(--heading-color);
 }
+p a:hover {
+  color: var(--heading-color);
+}
 @media (max-width: 900px) {
   .hero-image {
     background-image: none;
@@ -200,7 +207,7 @@ footer p {
   .hero,
   .about-hero,
   .gallery-hero {
-    padding: 50px 10px;
+    padding: 30px 10px;
   }
   .photo {
     margin-bottom: 20px;
@@ -213,9 +220,11 @@ footer p {
   footer p {
     display: flex;
     justify-content: center;
+    font-size: 10px;
+    /* letter-spacing: 0.5px; */
   }
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .about-name {
     font-size: 25px;
   }
@@ -226,4 +235,4 @@ footer p {
   .camera {
     width: 100%;
   }
-}
+} */
